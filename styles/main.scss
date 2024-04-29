@@ -1,0 +1,138 @@
+
+@import '_base';
+
+.sec-1{
+   min-height: 100vh;
+}
+
+.gradient-1{
+   background:$gradient-supersoft;
+  
+
+   
+}
+.header{
+
+  background: rgba(245, 245, 250, 0.2);
+   
+}
+.lang-hover,.separator,.num{
+  color: white;
+}
+.num{
+  font-weight: 700;
+}
+.img-logo-tablet{
+  display: none;
+}
+.burger-menu span{
+ background-color:  white;
+}
+.burger-menu::before,.burger-menu::after{
+  background-color: white;
+}
+
+.top_logo{
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100vh;
+  max-width: 100%;
+  min-height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  object-fit: cover;
+}
+.navigation,.section-logo,.main_title{
+  position: relative;
+  z-index: 2;
+}
+.main_title{
+  text-align: center;
+    margin-top: 129px;
+    color: white;
+    font-weight: 700;
+    font-size: 38px;
+}
+.scroll {
+  
+  width: 42px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  position: relative;
+  animation: down 1.5s infinite;
+  margin: 159px auto 35px auto;
+  box-sizing: border-box;
+}
+.scroll::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 9px;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid rgba(255, 255, 255, 1);
+  border-bottom: 2px solid rgba(255, 255, 255, 1);
+  transform: rotate(-45deg);
+}
+.list_side_scrol{
+height: 37px;
+  overflow-x: auto;
+}
+.list_side_items:not(:first-child){
+padding-left: 30px;
+}
+.list_side_scrol::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 2px; /* встановіть висоту полоски за вашим вибором */
+  background-color: black; /* змініть колір за потребою */
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .img-logo-tablet{
+    display: block;
+  }
+  
+  
+  .separator{
+    background: white;
+  }
+  
+  
+  h1 {
+     font-size: 38px;
+   }
+   h2 {
+     font-size: 30px;
+   }
+   .container {
+     max-width: calc(648px + 60px);
+   }
+   .header{
+    background: none;
+      
+   }
+   
+ }
+ @media screen and (min-width: 1024px) {
+   .container {
+     max-width: calc(904px + 60px);
+   }
+ }
+ @media screen and (min-width: 1400px) {
+   .container {
+     max-width: calc(1320px + 60px);
+   }
+   .header{
+      justify-content: flex-end;
+   }
+ }
+ 
