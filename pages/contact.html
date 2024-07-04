@@ -84,46 +84,29 @@
               </div>
             </div>
           </div>
-          <form class="contact-form" action="welcome.php" method="get">
+          <form id="form" class="contact-form" action="welcome.php" method="get">
             <h1>We would like to help you</h1>
-            <input
-              class="input"
-              placeholder="Name"
-              name="name"
-              required
-              type="text"
-              maxlength="36"
-              id="test"
-            />
-            <textarea
-              class="input"
-              placeholder="Message"
-              name="message"
-              maxlength="400"
-            ></textarea>
+            <div>
+                <input class="input" autocomplete="name" placeholder="Name" name="name" required type="text" maxlength="36" id="name"/>
+                <div id="nameError" class="error"></div>
+            </div>
+            <div>
+                <textarea id="message" autocomplete="message" class="input" placeholder="Message" name="message" maxlength="400"></textarea>
+                <div id="messageError" class="error"></div>
+            </div>
             <h3 class="caps">How to answer you?</h3>
-            <input
-              class="input"
-              name="phone"
-              placeholder="Phone number"
-              type="tel"
-              maxlength="16"
-            />
-            <input
-              class="input"
-              name="email"
-              placeholder="Email"
-              maxlength="60"
-              type="email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-            />
-
-            <button class="btn primary" type="submit" aria-label="Send request">
-              Send message
-            </button>
-
+            <div>
+                <input class="input" autocomplete="phone" name="phone" placeholder="Phone number" type="tel" maxlength="16" id="phone"/>
+                <div id="phoneError" class="error"></div>
+            </div>
+            <div>
+                <input id="email" autocomplete="email" class="input" name="email" placeholder="Email" maxlength="60" type="email"/>
+                <div id="emailError" class="error"></div>
+            </div>
+            <button id="submit" class="btn primary" type="button" aria-label="Send request">Send message</button>
             <div class="result"></div>
-          </form>
+        </form>
+    
         </div>
       </div>
     </section>
@@ -159,26 +142,14 @@
        
     </footer>
 
-    <script>
+    <script src="./script.js">
       document
         .querySelector(".burger-menu")
         .addEventListener("click", function () {
           this.classList.toggle("active");
           document.querySelector(".nav").classList.toggle("open");
         });
-      //  document.addEventListener("submit", formSubmit);
-
-      //     function formSubmit(event) {
-      //       event.preventDefault()
-      //       console.log(event, 'event')
-      //       const name = event.target[0].value;
-      //       const message = event.target[1].value;
-      //       const phone = event.target[2].value;
-      //       const email = event.target[3].value;
-      //       const result = document.querySelector('.result')
-      //       result.innerHTML = Your name:${name},<br/> Your message:${message},  <br/> your phone:${phone}, <br/> your email : ${email}
-      //       result.style.display = 'block'
-      //     }
+     
     </script>
   </body>
 </html>
